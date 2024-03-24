@@ -6,4 +6,6 @@ import com.alianza.co.model.Cliente;
 
 public interface IClienteDao extends CrudRepository<Cliente,Long> {
 
+	
+
 }

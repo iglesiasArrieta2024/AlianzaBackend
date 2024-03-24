@@ -3,6 +3,7 @@ package com.alianza.co.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,12 @@ public class ClienteController {
 	public ResponseEntity<ClienteResponseRest> serachCliente(){
 		ResponseEntity<ClienteResponseRest> reponse = clienteservice.search();
 		return reponse;
+	}
+		@GetMapping("/clientes{id}")
+		public ResponseEntity<ClienteResponseRest> serachClienteById(@PathVariable Long id){
+			ResponseEntity<ClienteResponseRest> reponse = clienteservice.searchById(id);
+			return reponse;
+		
 		
 	}
 
