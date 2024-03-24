@@ -19,7 +19,7 @@ public class Cliente  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String sharedKey;
+	private Long sharedKey;
 	
 	private String business_Id;
 	
