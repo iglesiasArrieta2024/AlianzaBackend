@@ -19,7 +19,7 @@ public class Cliente  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private Long sharedKey;
+	private String sharedKey;
 	
 	private String business_Id;
 	
@@ -27,6 +27,6 @@ public class Cliente  implements Serializable{
 	
 	private String phone;
 	
-	private Date data_added;
+	private String data_added;
 
 }

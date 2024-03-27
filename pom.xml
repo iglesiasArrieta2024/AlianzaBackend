@@ -55,6 +55,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                          <outputDirectory>${basedir}/target/classes/static/</outputDirectory>
+                          <resources>
+                              <resource>
+                                  <directory>${basedir}/../app-client/dist</directory >
+                              </resource>
+                          </resources>
+                      </configuration>
 			</plugin>
 		</plugins>
 	</build>
